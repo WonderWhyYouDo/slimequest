@@ -1,0 +1,148 @@
+body {
+    background-image: url('background.png'); /* Custom background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'SuperLegendBoy', Arial, sans-serif;
+    color: white;
+}
+
+#game-container {
+    display: none; /* Hide the game container initially */
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+#gameCanvas {
+    border: 2px solid white; /* Ensure the canvas is visible */
+    background-color: rgba(0, 0, 0, 0.5); /* Make sure the canvas background is visible */
+    z-index: 1; /* Ensure canvas is above other elements */
+}
+
+#sidebar {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    top: 10px;
+    right: -250px; /* Move the sidebar to the right */
+    z-index: 3; /* Ensure sidebar is above the canvas */
+    width: 220px; /* Make sidebar wider */
+}
+
+#slime-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: -250px; /* Move slime menu to the right */
+    z-index: 3; /* Ensure slime menu is above the canvas */
+    width: 220px; /* Make slime menu wider */
+}
+
+#slime-menu button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0295c3;
+    color: white;
+    cursor: pointer;
+    width: 90%; /* Make buttons take most of the width */
+}
+
+#slime-menu button:hover {
+    background-color: #027bb3;
+}
+
+#start-screen, #game-over-screen {
+    display: none; /* Hide start screen and game over screen initially */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 4; /* Ensure start screen and game over screen are above everything */
+}
+
+#start-screen {
+    display: flex; /* Show start screen initially */
+}
+
+#start-button, #difficulty-selection button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0295c3;
+    color: white;
+    cursor: pointer;
+}
+
+#start-button:hover, #difficulty-selection button:hover {
+    background-color: #027bb3;
+}
+
+#pause-button {
+    position: absolute;
+    bottom: 550px;
+    right: 10px; /* Move the pause button to the lower right corner */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0295c3;
+    color: white;
+    cursor: pointer;
+    z-index: 2; /* Ensure pause button is above the canvas */
+}
+
+#pause-button:hover {
+    background-color: #027bb3;
+}
+
+#info-box {
+    position: absolute;
+    top: 50px; /* Move info box to the top */
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    z-index: 3; /* Ensure info box is above the canvas */
+}
+
+#sidebar h1, #slime-menu h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+#sidebar p {
+    margin: 5px 0;
+}
+
+#info {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+#slimey-logo {
+    width: 150px;
+    height: auto;
+}
