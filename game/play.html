@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slimey's Defense</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=SuperLegendBoy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="start-screen">
+        <img id="slimey-logo" src="dq-slimelogo.png" alt="Slimey Logo">
+        <h1>Slimey's Defense</h1>
+        <div id="difficulty-selection">
+            <button onclick="selectDifficulty('easy')">Easy</button>
+            <button onclick="selectDifficulty('medium')">Medium</button>
+            <button onclick="selectDifficulty('hard')">Hard</button>
+        </div>
+        <button id="start-button" onclick="startGame()">Start Game</button>
+    </div>
+    <div id="game-container" style="display: none;">
+        <canvas id="gameCanvas"></canvas>
+        <div id="sidebar">
+            <h1>Slimey's Defense</h1>
+            <p>Score: <span id="score">0</span></p>
+            <p>Gold: <span id="gold">100</span></p>
+            <p>Wave: <span id="wave-number">1</span></p>
+            <p>Next Wave In: <span id="wave-timer">10</span>s</p>
+            <p>Level: <span id="level">1</span></p>
+        </div>
+        <div id="slime-menu">
+            <h2>Defensive Slimes</h2>
+            <button onclick="selectSlime('normal')">Normal Slime (10 Gold)</button>
+            <button onclick="selectSlime('fast')">Fast Slime (15 Gold)</button>
+            <button onclick="selectSlime('strong')">Strong Slime (20 Gold)</button>
+            <button onclick="selectSlime('slow')">Slow Slime (25 Gold)</button>
+            <button onclick="selectSlime('aoe')">AoE Slime (35 Gold)</button>
+            <button onclick="selectSlime('explosive')">Explosive Slime (40 Gold)</button>
+        </div>
+        <div id="info-box" style="display: none;">
+            <p id="info-content"></p>
+        </div>
+        <button id="pause-button" onclick="togglePause()" style="display: none;">Pause</button>
+    </div>
+    <div id="game-over-screen" style="display: none;">
+        <h1>Game Over</h1>
+        <p id="final-score">Final Score: 0</p>
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
+    <audio id="bg-music" src="bg-music.ogg" loop></audio>
+    <audio id="shoot-sound" src="shoot.wav"></audio>
+    <audio id="hit-sound" src="hit.wav"></audio>
+	<audio id="title-music" src="title.ogg" loop></audio>
+    <audio id="click-sound" src="click.wav"></audio>
+    <script src="game.js"></script>
+</body>
+</html>
